@@ -524,10 +524,11 @@ section div img{
 /*Navbar*/
 
 .animaciones:hover {
-    animation: changeColor 7s;
+    animation: changeColor 3s;
+    animation-iteration-count: infinite;
    }
 
-   /* @ + Nombre de la animación */
+
 @keyframes changeColor {
     0% {
         color: #418a5381;
@@ -546,6 +547,27 @@ section div img{
 
     }
 }
+
+/* Relatos page */
+/* Botones */
+.grid-item-p a, .grid-item-boton2 a, .grid-item-boton3 a, .grid-item-boton4 a{
+    transition: 3s;
+    background-color: transparent;
+}
+
+.grid-item-p a:hover, .grid-item-boton2 a:hover, .grid-item-boton3 a:hover, .grid-item-boton4 a:hover{
+    background-color: #B3A1A1;
+    animation: changeBoton 4s;
+}
+
+
+@keyframes changeBoton {
+
+    50% {
+        border-radius: 10%;
+    }
+}
+
 
 
    
