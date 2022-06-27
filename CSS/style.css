@@ -89,6 +89,7 @@ ul{
 
 li{
     margin: 8px;
+    margin-right: 10px;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
 }
@@ -192,6 +193,11 @@ footer div a{
 
 /*FOTOGRAFÍAS*/
 
+/* Header */
+.fotografias{
+    text-decoration-line: overline;
+}
+
 /* Sección N° 1 provisoria - la idea es que esta sección se vea como un collage de fotos */
 
 .collage{
@@ -240,6 +246,11 @@ section div img{
 }
 
 /* RELATOS */
+
+/* Header */
+.relatos{
+    text-decoration-line: overline;
+}
 
 /* Sección N° 1 */
 
@@ -388,6 +399,11 @@ section div img{
 
 /* BIO */
 
+/* Header */
+.biopage{
+    text-decoration-line: overline;
+}
+
 .bio{
     display: flex;
     justify-content: space-evenly;
@@ -434,6 +450,11 @@ section div img{
 
 
 /* Contacto */
+
+/* Header */
+.contacto{
+    text-decoration-line: overline;
+}
 
 .seguime{
     height: 60vh;
@@ -496,6 +517,60 @@ section div img{
         justify-content: center;
     }
 }
+
+
+/* Animaciones */
+
+/*Navbar*/
+
+.animaciones:hover {
+    animation: changeColor 3s;
+    animation-iteration-count: infinite;
+   }
+
+
+@keyframes changeColor {
+    0% {
+        color: #418a5381;
+    }
+    25% {
+        color: #54bcdf83;
+    }
+    50%{
+        color: #e87a6983;
+    }
+    75%{
+
+    }
+    100%{
+        color: #B3A1A1;
+
+    }
+}
+
+/* Relatos page */
+/* Botones */
+.grid-item-p a, .grid-item-boton2 a, .grid-item-boton3 a, .grid-item-boton4 a{
+    transition: 3s;
+    background-color: transparent;
+}
+
+.grid-item-p a:hover, .grid-item-boton2 a:hover, .grid-item-boton3 a:hover, .grid-item-boton4 a:hover{
+    background-color: #B3A1A1;
+    animation: changeBoton 4s;
+}
+
+
+@keyframes changeBoton {
+
+    50% {
+        border-radius: 10%;
+    }
+}
+
+
+
+   
 
 
 
