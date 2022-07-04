@@ -56,23 +56,36 @@ FUENTES
 
 /* HEADER */
 
+/* Checkbox */
+#check{
+    display: none;
+}
+
+#check:checked ~ nav{
+    transform: translateX(0);
+}
+
+/* Icono menú responsive */
+.icon-menu{
+    display: none;
+}
+
 header{
     border: solid #ffff 1px; /*Lo usé para ver las cajas del header. Cuando lo saco me deja un espacio blanco arriba */
     width: 100%;
     height: 13vh;
     background-color: #ffff;
     position: sticky;
-    top: 0;
+    top: 0 auto;
 }
 
 /* Logo link home */
 
-.logo__home{
+.logo-home{
     position: absolute;
-    width: 299px;
-    height: 16 px;
+    width: 260px;
     left: 1%;
-    margin-top: 1.5vh;
+    bottom: 15%;    
 }
 
 /* Menú navegable */ 
@@ -83,7 +96,7 @@ ul{
     flex-direction: row; 
     justify-content: flex-end;
     flex-wrap: wrap;
-    margin-top: 3.25vh;
+    margin-top: 3.50vh;
     right: 1%;    
 }
 
@@ -92,6 +105,79 @@ li{
     margin-right: 10px;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
+}
+
+/* Menú responsive */
+@media screen and (max-width: 1000px) {
+
+
+    nav{
+        background-color: #b3a1a1ab;
+        position: absolute;
+        width: 100%;
+        height: 76vh;
+        transform: translateX(-100%);
+        transition: all 2s;
+        top: 78px;
+    }
+    .navbar li{        
+        width: 100%; 
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        margin: 30px;
+    }
+
+    .navbar li a{
+        padding: 10px;
+    }
+
+    .navbar li a:hover{
+        border-radius: 12%;
+        background-color: #b3a1a1;
+        transition: all 2s;
+    }
+
+
+    .logo-home{
+        width: 200px;
+        bottom: 22%;
+        left: 5px; 
+    }
+
+    .icon-menu {
+        height: 55px;
+        display: flex;
+        float: right;
+        margin-right: 5px;
+        margin-top: 12px;
+        border-radius: 15%;
+    }
+
+    .icon-menu:hover {
+        animation: changeForm 4s;
+        animation-iteration-count: infinite;
+       }
+    
+    
+    @keyframes changeForm {
+        0% {
+            background-color: #418a5381;
+        }
+        25% {
+            background-color: #54bcdf83;
+        }
+        50%{
+            background-color: #e87a6983;
+        }
+        75%{
+    
+        }
+        100%{
+            background-color: #B3A1A1;
+    
+        }
+    }
 }
 
 
@@ -112,7 +198,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #b3a1a1ab;
+    background-color: #b3a1a1da;
 }
 
 footer div a{
@@ -523,6 +609,10 @@ section div img{
 
 /*Navbar*/
 
+@media screen and (min-width: 1000px) {
+
+
+
 .animaciones:hover {
     animation: changeColor 3s;
     animation-iteration-count: infinite;
@@ -546,6 +636,8 @@ section div img{
         color: #B3A1A1;
 
     }
+}
+
 }
 
 /* Relatos page */
