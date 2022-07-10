@@ -1,0 +1,285 @@
+
+/* Fuentes tipográficas */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap'); /*Quicksand*/
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap'); /*Bitter*/
+
+
+/* Restablecer valores por default */
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+/* HEADER */
+
+/* Checkbox */
+
+#check{
+    display: none;
+}
+
+#check:checked ~ nav{
+    transform: translateX(0);
+}
+
+/* Icono menú responsive */
+.icon-menu{
+    display: none;
+}
+
+div{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-areas:
+    'header header header'
+    'main main main'
+    'footer footer footer';
+
+    /* HEADER */
+
+    header{
+        border: solid #ffff 1px; /*Lo usé para ver las cajas del header. Cuando lo saco me deja un espacio blanco arriba */
+        width: 100%;
+        height: 13vh;
+        background-color: #ffff;
+        position: sticky;
+        top: 0 auto;
+        grid-area: header;
+
+        nav{
+            margin-top: 3.50vh;
+
+            ul{
+                position: relative;
+                display: flex;
+                flex-direction: row; 
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                right: 1%;
+        
+                li{
+                    margin: 8px;
+                    margin-right: 10px;
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 16px;
+    
+                    a{
+                        &:hover{
+                            animation: changeColor 3s;
+                            animation-iteration-count: infinite;
+                        }
+    
+    
+                        @keyframes changeColor {
+                            0% {
+                                color: #418a5381;
+                            }
+                            25% {
+                                color: #54bcdf83;
+                            }
+                            50%{
+                                color: #e87a6983;
+                            }
+                            75%{
+    
+                            }
+                            100%{
+                                color: #B3A1A1;
+    
+                            }
+                        }
+                    }
+                }    
+            }
+
+        }
+        
+        
+    }
+
+    /* SECCIÓN PRINCIPAL */
+
+    main{
+        grid-area: main;
+
+        img{
+            object-fit:cover;
+            width: 100%;
+            height: 75vh;
+        }
+    }
+
+    /* FOOTER */
+
+    footer{
+        width: 100%;
+        height: 11vh; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #b3a1a1da;
+        grid-area: footer;
+
+        /* Info izq */
+
+       
+
+}
+
+
+/* Links RR.SS */
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8vh;
+}
+
+.redes__soc{
+    width: 20px;
+    margin: 0px 8px  
+}
+
+.redes__soc--fb{
+    width: 10px;
+}
+
+/* Links der */
+
+.der{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+.der__logo{
+    height: 25px;
+}
+
+/* Logo link home */
+
+.logo-home{
+    position: absolute;
+    width: 260px;
+    left: 1%;
+    bottom: 15%;    
+}
+
+
+
+
+
+
+/* Menú responsive */
+
+@media screen and (max-width: 1000px) {
+
+
+    nav{
+        background-color: #b3a1a1ab;
+        position: absolute;
+        width: 100%;
+        height: 76vh;
+        transform: translateX(-100%);
+        transition: all 2s;
+        top: 78px;
+    }
+    .navbar li{        
+        width: 100%; 
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        margin: 30px;
+    }
+
+    .navbar li a{
+        padding: 10px;
+    }
+
+    .navbar li a:hover{
+        border-radius: 12%;
+        background-color: #b3a1a1;
+        transition: all 2s;
+    }
+
+
+    .logo-home{
+        width: 200px;
+        bottom: 22%;
+        left: 5px; 
+    }
+
+    .icon-menu {
+        height: 55px;
+        display: flex;
+        float: right;
+        margin-right: 5px;
+        margin-top: 12px;
+        border-radius: 15%;
+    }
+
+    .icon-menu:hover {
+        animation: changeForm 4s;
+        animation-iteration-count: infinite;
+       }
+    
+    
+    @keyframes changeForm {
+        0% {
+            background-color: #418a5381;
+        }
+        25% {
+            background-color: #54bcdf83;
+        }
+        50%{
+            background-color: #e87a6983;
+        }
+        75%{
+    
+        }
+        100%{
+            background-color: #B3A1A1;
+    
+        }
+    }
+}
+
+
+/* Responsive - HEADER Y FOOTER */
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+    
+    footer div a{
+        color: #606060;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 10px;       
+    }
+    
+    /* Links RR.SS */
+        
+    .redes__soc{
+        width: 15px;
+        margin: 0px 6px  
+    }
+    
+    .redes__soc--fb{
+        width: 8px;
+    }
+    
+    /* Links der */
+    
+    .der__logo{
+        height: 20px;
+    }
+    
+}
+}
